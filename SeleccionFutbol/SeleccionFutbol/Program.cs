@@ -121,6 +121,7 @@ namespace SeleccionFutbol
 
             Console.ReadLine();
             //TODO mandarles a entrenar, dirigir o dar masajes. 
+            // TODO contador
 
 
         }
