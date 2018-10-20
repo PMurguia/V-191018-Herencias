@@ -8,8 +8,6 @@ namespace SeleccionFutbol
     {
         static void Main(string[] args)
         {
-           
-           
 
             Futbolista f1 = new Futbolista();
             f1.SetId(10);
@@ -20,8 +18,6 @@ namespace SeleccionFutbol
             f1.SetDemarcacion("Falso nueve");
             f1.SetViajar(true);
             f1.SetConcentrarse(false);
-            
-            
 
             Futbolista f2 = new Futbolista();
             f2.SetId(1);
@@ -30,8 +26,8 @@ namespace SeleccionFutbol
             f2.SetEdad(25);
             f2.SetDorsal(1);
             f2.SetDemarcacion("Portero");
-            f1.SetViajar(true);
-            f1.SetConcentrarse(false);
+            f2.SetViajar(true);
+            f2.SetConcentrarse(false);
 
             Futbolista f3 = new Futbolista();
             f3.SetId(5);
@@ -40,8 +36,8 @@ namespace SeleccionFutbol
             f3.SetEdad(32);
             f3.SetDorsal(5);
             f3.SetDemarcacion("Mediocentro Defensivo. ");
-            f1.SetViajar(true);
-            f1.SetConcentrarse(false);
+            f3.SetViajar(true);
+            f3.SetConcentrarse(false);
 
             Futbolista f4 = new Futbolista();
             f4.SetId(18);
@@ -50,8 +46,8 @@ namespace SeleccionFutbol
             f4.SetEdad(28);
             f4.SetDorsal(18);
             f4.SetDemarcacion("Lateral Izquierdo. ");
-            f1.SetViajar(true);
-            f1.SetConcentrarse(false);
+            f4.SetViajar(true);
+            f4.SetConcentrarse(false);
 
             Masajista m1 = new Masajista();
             m1.SetId(101);
@@ -60,8 +56,8 @@ namespace SeleccionFutbol
             m1.SetEdad(38);
             m1.SetTitulacion("Osteopata");
             m1.SetAniosExp(10);
-            f1.SetViajar(true);
-            f1.SetConcentrarse(false);
+            m1.SetViajar(true);
+            m1.SetConcentrarse(false);
 
 
             Masajista m2 = new Masajista();
@@ -71,8 +67,8 @@ namespace SeleccionFutbol
             m2.SetEdad(38);
             m2.SetTitulacion("Osteopata");
             m2.SetAniosExp(10);
-            f1.SetViajar(true);
-            f1.SetConcentrarse(false);
+            m2.SetViajar(true);
+            m2.SetConcentrarse(false);
 
 
             Seleccionador s1 = new Seleccionador();
@@ -81,8 +77,8 @@ namespace SeleccionFutbol
             s1.SetApellido(" Maradona");
             s1.SetEdad(48);
             s1.SetIdFederacion("Argentina");
-            f1.SetViajar(true);
-            f1.SetConcentrarse(false);
+            s1.SetViajar(true);
+            s1.SetConcentrarse(false);
 
 
             List<Futbolista> Futbolistas = new List<Futbolista>
@@ -111,20 +107,16 @@ namespace SeleccionFutbol
             foreach (Futbolista x in Futbolistas)
             {
                 Console.WriteLine(x.ToStringFutbolista());
-               
-                
             }
 
             foreach(Seleccionador x in Selec)
             {
-                Console.WriteLine(x.ToStringSeleccionador());
-               
+                Console.WriteLine(x.ToStringSeleccionador());  
             }
 
             foreach(Masajista x in Masajistas)
             {
                 Console.WriteLine(x.ToStringMasajista());
-
             }
 
             Console.ReadLine();
