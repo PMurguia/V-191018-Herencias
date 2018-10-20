@@ -10,11 +10,11 @@ namespace SeleccionFutbol
     {
         private string titulacion;
         private int aniosExp;
-        private string tipo;
+       
 
         public Masajista()
         {
-            this.tipo = "Masajista";
+          
         }
 
         public string GetTitulacion()
@@ -42,7 +42,7 @@ namespace SeleccionFutbol
 
         public string ToStringMasajista()
         {
-            return base.ToStringSeleccion() + "Titulacion: " + titulacion + " Años de experiencia: " + aniosExp + "\n" + tipo;
+            return base.ToStringSeleccion() + "\nTitulacion: " + titulacion + "\nAños de experiencia: " + aniosExp;
         }
     }
 }

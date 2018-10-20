@@ -9,7 +9,7 @@ namespace SeleccionFutbol
         static void Main(string[] args)
         {
            
-            int cont = 0;
+           
 
             Futbolista f1 = new Futbolista();
             f1.SetId(10);
@@ -19,7 +19,8 @@ namespace SeleccionFutbol
             f1.SetDorsal(10);
             f1.SetDemarcacion("Falso nueve");
             f1.SetViajar(true);
-            f1.SetConcentrarse(true);
+            f1.SetConcentrarse(false);
+            
             
 
             Futbolista f2 = new Futbolista();
@@ -29,6 +30,8 @@ namespace SeleccionFutbol
             f2.SetEdad(25);
             f2.SetDorsal(1);
             f2.SetDemarcacion("Portero");
+            f1.SetViajar(true);
+            f1.SetConcentrarse(false);
 
             Futbolista f3 = new Futbolista();
             f3.SetId(5);
@@ -37,6 +40,8 @@ namespace SeleccionFutbol
             f3.SetEdad(32);
             f3.SetDorsal(5);
             f3.SetDemarcacion("Mediocentro Defensivo. ");
+            f1.SetViajar(true);
+            f1.SetConcentrarse(false);
 
             Futbolista f4 = new Futbolista();
             f4.SetId(18);
@@ -45,6 +50,8 @@ namespace SeleccionFutbol
             f4.SetEdad(28);
             f4.SetDorsal(18);
             f4.SetDemarcacion("Lateral Izquierdo. ");
+            f1.SetViajar(true);
+            f1.SetConcentrarse(false);
 
             Masajista m1 = new Masajista();
             m1.SetId(101);
@@ -53,7 +60,9 @@ namespace SeleccionFutbol
             m1.SetEdad(38);
             m1.SetTitulacion("Osteopata");
             m1.SetAniosExp(10);
-        
+            f1.SetViajar(true);
+            f1.SetConcentrarse(false);
+
 
             Masajista m2 = new Masajista();
             m2.SetId(201);
@@ -62,7 +71,9 @@ namespace SeleccionFutbol
             m2.SetEdad(38);
             m2.SetTitulacion("Osteopata");
             m2.SetAniosExp(10);
-            
+            f1.SetViajar(true);
+            f1.SetConcentrarse(false);
+
 
             Seleccionador s1 = new Seleccionador();
             s1.SetId(102);
@@ -70,6 +81,8 @@ namespace SeleccionFutbol
             s1.SetApellido(" Maradona");
             s1.SetEdad(48);
             s1.SetIdFederacion("Argentina");
+            f1.SetViajar(true);
+            f1.SetConcentrarse(false);
 
 
             List<Futbolista> Futbolistas = new List<Futbolista>
@@ -85,13 +98,15 @@ namespace SeleccionFutbol
                 s1
             };
 
-            List<Masajista> Masajistas = new List<Masajista>();
-            Masajistas.Add(m1);
-          
+            List<Masajista> Masajistas = new List<Masajista>
+            {
+                m1,
+                m2
+            };
+
 
             Console.WriteLine("\t\t\t\t##########---SELECCION LAMASIA DE FUTBOL---##########\n");
 
-            Console.WriteLine(Seleccion.Contador(cont));
 
             foreach (Futbolista x in Futbolistas)
             {
@@ -113,7 +128,7 @@ namespace SeleccionFutbol
             }
 
             Console.ReadLine();
-
+            //TODO mandarles a entrenar, dirigir o dar masajes. 
 
 
         }

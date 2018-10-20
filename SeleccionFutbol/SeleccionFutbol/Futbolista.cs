@@ -47,7 +47,7 @@ namespace SeleccionFutbol
 
         public string ToStringFutbolista()
         {
-            return base.ToStringSeleccion() + "\nDorsal: " + dorsal + "\nDemarcacion: " + demarcacion + "\n" + tipo;   
+            return base.ToStringSeleccion() + "\nDorsal: " + dorsal + "\nDemarcacion: " + demarcacion + "\n";   
         }
     }
 }

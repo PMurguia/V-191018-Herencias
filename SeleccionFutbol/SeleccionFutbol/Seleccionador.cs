@@ -9,11 +9,11 @@ namespace SeleccionFutbol
     class Seleccionador : Seleccion
     {
         private string idFederacion;
-        private string tipo;
+      
 
         public Seleccionador()
         {
-            this.tipo = "seleccionador";
+           
         }
 
         public string GetIdFederacion()
@@ -32,7 +32,7 @@ namespace SeleccionFutbol
 
         public string ToStringSeleccionador()
         {
-            return base.ToStringSeleccion() + "\nId. Federacion: " + idFederacion + "\n" + tipo;
+            return base.ToStringSeleccion() + "\nId. Federacion: " + idFederacion + "\n";
         }
     }
 }
