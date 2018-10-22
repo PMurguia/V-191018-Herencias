@@ -32,7 +32,7 @@ namespace SeleccionFutbol
 
         public string ToStringSeleccionador()
         {
-            return base.ToStringSeleccion() + "\nId. Federacion: " + idFederacion + "\n";
+            return base.ToStringSeleccion() + "\nId. Federacion: " + idFederacion;
         }
     }
 }

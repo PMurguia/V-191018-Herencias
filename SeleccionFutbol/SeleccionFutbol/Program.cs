@@ -18,6 +18,7 @@ namespace SeleccionFutbol
             f1.SetDemarcacion("Falso nueve");
             f1.SetViajar(true);
             f1.SetConcentrarse(false);
+            
 
             Futbolista f2 = new Futbolista();
             f2.SetId(1);
@@ -104,21 +105,26 @@ namespace SeleccionFutbol
             Console.WriteLine("\t\t\t\t##########---SELECCION LAMASIA DE FUTBOL---##########\n");
 
 
+
             foreach (Futbolista x in Futbolistas)
             {
                 Console.WriteLine(x.ToStringFutbolista());
+                Console.WriteLine("A entrenar. ");
             }
 
             foreach(Seleccionador x in Selec)
             {
-                Console.WriteLine(x.ToStringSeleccionador());  
+                Console.WriteLine(x.ToStringSeleccionador());
+                Console.WriteLine("A dirigir");
             }
 
             foreach(Masajista x in Masajistas)
             {
                 Console.WriteLine(x.ToStringMasajista());
+                Console.WriteLine("A dar masajes. ");
             }
 
+            
             Console.ReadLine();
             //TODO mandarles a entrenar, dirigir o dar masajes. 
             // TODO contador

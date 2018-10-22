@@ -10,11 +10,11 @@ namespace SeleccionFutbol
     {
         private int dorsal;
         private string demarcacion;
-        private string tipo;
+        
 
         public Futbolista()
         {
-            this.tipo = "Futbolista";
+           
         }
 
         public int GetDorsal()
@@ -47,7 +47,7 @@ namespace SeleccionFutbol
 
         public string ToStringFutbolista()
         {
-            return base.ToStringSeleccion() + "\nDorsal: " + dorsal + "\nDemarcacion: " + demarcacion + "\n";   
+            return base.ToStringSeleccion() + "\nDorsal: " + dorsal + "\nDemarcacion: " + demarcacion;   
         }
     }
 }
