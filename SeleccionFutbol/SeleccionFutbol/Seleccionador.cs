@@ -9,6 +9,7 @@ namespace SeleccionFutbol
     class Seleccionador : Seleccion
     {
         private string idFederacion;
+        private string tipo;
       
 
         public Seleccionador()
@@ -20,15 +21,19 @@ namespace SeleccionFutbol
         {
             return idFederacion;
         }
+        public string GetTipo()
+        {
+            return tipo;
+        }
         public void SetIdFederacion(string idFederacion)
         {
             this.idFederacion = idFederacion;
         }
-
-        public static void DirigirPartido(string idFederacion)
+        public void SetTipo(string tipo)
         {
-
+            this.tipo = tipo;
         }
+
 
         public override string ToString()
         {

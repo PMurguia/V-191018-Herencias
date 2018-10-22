@@ -19,6 +19,7 @@ namespace SeleccionFutbol
             f1.SetViajar(true);
             f1.SetConcentrarse(false);
             
+            
 
             Futbolista f2 = new Futbolista();
             f2.SetId(1);
@@ -132,15 +133,28 @@ namespace SeleccionFutbol
 
             foreach(Seleccion integrante in seleccions)
             {
+                
                 Console.WriteLine(integrante.GetType().Name.ToUpper());
                 Console.WriteLine(integrante.ToString());
+                //if(integrante.GetConcentrarse() == false)
+                if (integrante.GetType().Name == "Masajista")
+                {
+                    Console.WriteLine("A dar masajes");
+                }
+                else if (integrante.GetType().Name == "Futbolista")
+                {
+                    Console.WriteLine("A entrenar");
+                }
+                else if (integrante.GetType().Name == "Seleccionador")
+                {
+                    Console.WriteLine("A dirigir");
+                }
                 Console.WriteLine("********************************************");
             }
             Console.WriteLine("Integrantes totales: " + seleccions.Count);
 
             Console.ReadLine();
-            //TODO mandarles a entrenar, dirigir o dar masajes. 
-            // TODO contador
+         
 
 
         }

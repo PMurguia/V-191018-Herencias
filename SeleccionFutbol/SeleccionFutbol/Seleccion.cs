@@ -52,7 +52,7 @@ namespace SeleccionFutbol
                 return "No";
             }
         }
-        public string GetConcentrarse(bool conc)
+        public string GetConcentrarse()
         {
             if (conc == true)
             {
@@ -108,11 +108,11 @@ namespace SeleccionFutbol
 
         public override string ToString()
         {
-            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse(conc);
+            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse();
         }
         public string ToStringSeleccion()
         {
-            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse(conc);
+            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse();
         }
 
     }

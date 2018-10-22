@@ -10,6 +10,7 @@ namespace SeleccionFutbol
     {
         private int dorsal;
         private string demarcacion;
+        private string tipo;
         
 
         public Futbolista()
@@ -25,6 +26,10 @@ namespace SeleccionFutbol
         {
             return demarcacion;
         }
+        public string GetTipo()
+        {
+            return tipo;
+        }
 
         public void SetDorsal(int dorsal)
         {
@@ -34,15 +39,9 @@ namespace SeleccionFutbol
         {
             this.demarcacion = demarcacion;
         }
-
-        public static void JugarPartido(int dorsal, string demarcacion)
+        public void SetTipo(string tipo)
         {
-
-        }
-
-        public static void Entrenar(int dorsal, string demarcacion)
-        {
-
+            this.tipo = tipo;
         }
 
 
