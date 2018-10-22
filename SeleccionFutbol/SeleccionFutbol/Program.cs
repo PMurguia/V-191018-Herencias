@@ -82,49 +82,62 @@ namespace SeleccionFutbol
             s1.SetConcentrarse(false);
 
 
-            List<Futbolista> Futbolistas = new List<Futbolista>
+            List<Seleccion> seleccions = new List<Seleccion>
             {
-                f1,
-                f2,
-                f3,
-                f4
+                f1,f2,f3,f4,m1,m2,s1
             };
 
-            List<Seleccionador> Selec = new List<Seleccionador>
-            {
-                s1
-            };
+            //List<Futbolista> Futbolistas = new List<Futbolista>
+            //{
+            //    f1,
+            //    f2,
+            //    f3,
+            //    f4
+            //};
 
-            List<Masajista> Masajistas = new List<Masajista>
-            {
-                m1,
-                m2
-            };
+            //List<Seleccionador> Selec = new List<Seleccionador>
+            //{
+            //    s1
+            //};
+
+            //List<Masajista> Masajistas = new List<Masajista>
+            //{
+            //    m1,
+            //    m2
+            //};
 
 
+
+
+
+            //foreach (Futbolista x in Futbolistas)
+            //{
+            //    Console.WriteLine(x.ToStringFutbolista());
+            //    Console.WriteLine("A entrenar. ");
+            //}
+
+            //foreach(Seleccionador x in Selec)
+            //{
+            //    Console.WriteLine(x.ToStringSeleccionador());
+            //    Console.WriteLine("A dirigir");
+            //}
+
+            //foreach(Masajista x in Masajistas)
+            //{
+            //    Console.WriteLine(x.ToStringMasajista());
+            //    Console.WriteLine("A dar masajes. ");
+                
+            //}
             Console.WriteLine("\t\t\t\t##########---SELECCION LAMASIA DE FUTBOL---##########\n");
 
-
-
-            foreach (Futbolista x in Futbolistas)
+            foreach(Seleccion integrante in seleccions)
             {
-                Console.WriteLine(x.ToStringFutbolista());
-                Console.WriteLine("A entrenar. ");
+                Console.WriteLine(integrante.GetType().Name.ToUpper());
+                Console.WriteLine(integrante.ToString());
+                Console.WriteLine("********************************************");
             }
+            Console.WriteLine("Integrantes totales: " + seleccions.Count);
 
-            foreach(Seleccionador x in Selec)
-            {
-                Console.WriteLine(x.ToStringSeleccionador());
-                Console.WriteLine("A dirigir");
-            }
-
-            foreach(Masajista x in Masajistas)
-            {
-                Console.WriteLine(x.ToStringMasajista());
-                Console.WriteLine("A dar masajes. ");
-            }
-
-            
             Console.ReadLine();
             //TODO mandarles a entrenar, dirigir o dar masajes. 
             // TODO contador

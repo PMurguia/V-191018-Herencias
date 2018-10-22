@@ -40,6 +40,10 @@ namespace SeleccionFutbol
 
         }
 
+        public override string ToString()
+        {
+            return base.ToString() +"\nTitulacion: " + titulacion + "\nAños de experiencia: " + aniosExp;
+        }
         public string ToStringMasajista()
         {
             return base.ToStringSeleccion() + "\nTitulacion: " + titulacion + "\nAños de experiencia: " + aniosExp;

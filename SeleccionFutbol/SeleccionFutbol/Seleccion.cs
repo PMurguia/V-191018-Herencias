@@ -14,13 +14,15 @@ namespace SeleccionFutbol
         private int edad;
         private bool viajar;
         private bool conc;
+        static int contador;  
+        
 
-        int cont = 0;
+       
        
 
-        public Seleccion()
+        public Seleccion():base()
         {
-           
+            contador++;
         }
 
         public int GetId()
@@ -62,6 +64,10 @@ namespace SeleccionFutbol
             }
                 
         }
+        public int GetContador()
+        {
+            return contador;
+        }
 
         public void SetId(int id)
         {
@@ -87,6 +93,7 @@ namespace SeleccionFutbol
         {
             this.conc = conc;
         }
+        
 
         //public string Concentrarse(bool conc)
         //{
@@ -95,15 +102,19 @@ namespace SeleccionFutbol
 
         //public string Viajar (bool viajar)
         //{
-            
+
         //    return "Ha viajado";
         //}
 
-
+        public override string ToString()
+        {
+            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse(conc);
+        }
         public string ToStringSeleccion()
         {
             return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse(conc);
         }
+
     }
 
 }

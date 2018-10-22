@@ -30,6 +30,10 @@ namespace SeleccionFutbol
 
         }
 
+        public override string ToString()
+        {
+            return base.ToString() + "\nId. Federacion: " + idFederacion;
+        }
         public string ToStringSeleccionador()
         {
             return base.ToStringSeleccion() + "\nId. Federacion: " + idFederacion;
