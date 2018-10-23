@@ -10,9 +10,8 @@ namespace SeleccionFutbol
     {
         private string nombre;
         private List<Seleccion> seleccionPais;
-        private int integrantes;
+
         private static int numeroSeleccionador, numeroMasajista;
-   
 
         public SeleccionPais(string nombre)
         {
@@ -26,45 +25,130 @@ namespace SeleccionFutbol
             this.seleccionPais = seleccionPais;
         }
 
-        public void AnadirIntegrante(Seleccion i)
+        public void AniadirSeleccion(Seleccion i)
         {
-            if (i.GetType().Name == "Seleccionador")
+            if (AltaSeleccion(i) == true)
             {
-                numeroSeleccionador++;
+                if (i.GetType().Name == "Masajista")
+                {
+                    numeroMasajista++;
+                }
+                else if (i.GetType().Name == "Seleccionador")
+                {
+                    numeroSeleccionador++;
+                }
+                Console.WriteLine("Integrante " + i.GetType().Name + " añadido.");
             }
-            else if (i.GetType().Name == "Masajista")
-            {
-                numeroMasajista++;
-            }
-            seleccionPais.Add(i);
         }
-
-        //public Boolean AnadirParticipante(Seleccion i)
-        //{
-        //    if(seleccionPais.Count <= 30)
-        //    {
-        //        if(i.GetType().Name == "Seleccionador" && numeroSeleccionador>2)
-        //        {
-        //            Console.WriteLine("Ya tenemos suficientes, gracias. ¿No quiere ser nuestro aguador? ");
-        //            return true;
-        //        }
-        //        else if(i.GetType().Name == "Masajista" && numeroMasajista<4)
-        //        {
-        //            Console.WriteLine("Te hemos dicho que puedes ser nuestro aguador. Resto de puestos ocupados. ");
-        //            return true;
-        //        }
-        //        else if(i.GetType().Name == "Futbolista")
-        //        {
-        //            return true;
-        //        }
-        //        Console.ReadLine();
-        //    }
-        //}
-
-
-        public List<Seleccion> GetSeleccionPais()
+        public List<Seleccion> MostrarDatosSeleccion()
         {
             return seleccionPais;
         }
+
+        public bool AltaSeleccion(Seleccion i)
+        {
+            if (seleccionPais.Count <= 30)
+            {
+                if (i.GetType().Name == "Masajista" && numeroMasajista < 4)
+                {
+                    return true;
+                }
+                else if (i.GetType().Name == "Seleccionador" && numeroSeleccionador < 2)
+                {
+                    return true;
+                }
+                else if (i.GetType().Name == "Futbolista")
+                {
+                    return true;
+                }
+                Console.WriteLine("No entran más " + i.GetType().Name + "s en la selección. ");
+                Console.ReadLine();
+                return false;
+            }
+            Console.WriteLine("No entran más " + i.GetType().Name + "s en la selección. ");
+            Console.ReadLine();
+            return false;
+        }
+
+        public bool BajaSeleccion(Seleccion seleccion, int id)
+        {
+            if (seleccion.GetId() == id)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void RemoveSeleccion(Seleccion seleccion)
+        {
+            if (BajaSeleccion(seleccion, seleccion.GetId()))
+            {
+                if (seleccion.GetType().Name == "Masajista")
+                {
+                    numeroMasajista--;
+                }
+                else if (seleccion.GetType().Name == "Seleccionador")
+                {
+                    numeroSeleccionador--;
+                }
+            }
+        }
+
+        public void PrepararPartido()
+        {
+            foreach (Seleccion integrante in this.seleccionPais)
+            {
+                Console.WriteLine(integrante.GetType().Name.ToUpper());
+                // Console.WriteLine(integrante.ToString());
+                //if(integrante.GetConcentrarse() == false)
+                if (integrante.GetType().Name == "Masajista")
+                {
+                    Console.WriteLine(integrante.GetNombre());
+                    Console.WriteLine("A dar masajes");
+                }
+                else if (integrante.GetType().Name == "Futbolista")
+                {
+                    Console.WriteLine(integrante.GetNombre());
+                    Console.WriteLine("A entrenar");
+                }
+                else if (integrante.GetType().Name == "Seleccionador")
+                {
+                    Console.WriteLine(integrante.GetNombre());
+                    Console.WriteLine("Dirigir entrenamiento");
+                }
+                Console.WriteLine("********************************************");
+            }
+        }
+
+        public void JugarPartido()
+        {
+            foreach (Seleccion integrante in this.seleccionPais)
+            {
+                Console.WriteLine(integrante.GetType().Name.ToUpper());
+               // Console.WriteLine(integrante.ToString());
+                //if(integrante.GetConcentrarse() == false)
+                if (integrante.GetType().Name == "Masajista")
+                {
+                    Console.WriteLine(integrante.GetNombre());
+                    Console.WriteLine("A dar masajes");
+                }
+                else if (integrante.GetType().Name == "Futbolista")
+                {
+                    Console.WriteLine(integrante.GetNombre());
+                    Console.WriteLine("Jugar Partido");
+                }
+                else if (integrante.GetType().Name == "Seleccionador")
+                {
+                    Console.WriteLine(integrante.GetNombre());
+                    Console.WriteLine("Dirigir partido");
+                }
+                Console.WriteLine("********************************************");
+            }
+        }
     }
 }
+
+

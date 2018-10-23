@@ -41,7 +41,7 @@ namespace SeleccionFutbol
         {
             return edad;
         }
-        public string GetViajar(bool viajar)
+        public string GetViajar()
         {
             if (viajar == true)
             {
@@ -108,11 +108,11 @@ namespace SeleccionFutbol
 
         public override string ToString()
         {
-            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse();
+            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar() + "\n¿Está concentrado? " + GetConcentrarse();
         }
         public string ToStringSeleccion()
         {
-            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar(viajar) + "\n¿Está concentrado? " + GetConcentrarse();
+            return "\nId: " + id + "\nNombre: " + nombre + "\nApellido: " + apellido + "\nEdad: " + edad + "\n¿Ha viajado? " + GetViajar() + "\n¿Está concentrado? " + GetConcentrarse();
         }
 
     }

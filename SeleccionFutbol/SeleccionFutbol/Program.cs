@@ -18,8 +18,8 @@ namespace SeleccionFutbol
             f1.SetDemarcacion("Falso nueve");
             f1.SetViajar(true);
             f1.SetConcentrarse(false);
-            
-            
+
+
 
             Futbolista f2 = new Futbolista();
             f2.SetId(1);
@@ -88,6 +88,10 @@ namespace SeleccionFutbol
                 f1,f2,f3,f4,m1,m2,s1
             };
 
+            SeleccionPais sp = new SeleccionPais("paris", seleccions);
+
+
+
             //List<Futbolista> Futbolistas = new List<Futbolista>
             //{
             //    f1,
@@ -96,47 +100,44 @@ namespace SeleccionFutbol
             //    f4
             //};
 
-            //List<Seleccionador> Selec = new List<Seleccionador>
-            //{
-            //    s1
-            //};
+            //    List<Seleccionador> Selec = new List<Seleccionador>
+            //    {
+            //        s1
+            //    };
 
-            //List<Masajista> Masajistas = new List<Masajista>
-            //{
-            //    m1,
-            //    m2
-            //};
+            //    List<Masajista> Masajistas = new List<Masajista>
+            //    {
+            //        m1,
+            //        m2
+            //    };
+
+            //    foreach (Futbolista x in Futbolistas)
+            //    {
+            //        Console.WriteLine(x.ToStringFutbolista());
+            //        Console.WriteLine("A entrenar. ");
+            //    }
+
+            //    foreach (Seleccionador x in Selec)
+            //    {
+            //        Console.WriteLine(x.ToStringSeleccionador());
+            //        Console.WriteLine("A dirigir");
+            //    }
+
+            //    foreach (Masajista x in Masajistas)
+            //    {
+            //        Console.WriteLine(x.ToStringMasajista());
+            //        Console.WriteLine("A dar masajes. ");
+
+            //    }
 
 
-
-
-
-            //foreach (Futbolista x in Futbolistas)
-            //{
-            //    Console.WriteLine(x.ToStringFutbolista());
-            //    Console.WriteLine("A entrenar. ");
-            //}
-
-            //foreach(Seleccionador x in Selec)
-            //{
-            //    Console.WriteLine(x.ToStringSeleccionador());
-            //    Console.WriteLine("A dirigir");
-            //}
-
-            //foreach(Masajista x in Masajistas)
-            //{
-            //    Console.WriteLine(x.ToStringMasajista());
-            //    Console.WriteLine("A dar masajes. ");
-                
-            //}
             Console.WriteLine("\t\t\t\t##########---SELECCION LAMASIA DE FUTBOL---##########\n");
 
-            foreach(Seleccion integrante in seleccions)
+            foreach (Seleccion integrante in seleccions)
             {
-                
                 Console.WriteLine(integrante.GetType().Name.ToUpper());
                 Console.WriteLine(integrante.ToString());
-                //if(integrante.GetConcentrarse() == false)
+                //if (integrante.GetConcentrarse() == false)
                 if (integrante.GetType().Name == "Masajista")
                 {
                     Console.WriteLine("A dar masajes");
@@ -152,11 +153,56 @@ namespace SeleccionFutbol
                 Console.WriteLine("********************************************");
             }
             Console.WriteLine("Integrantes totales: " + seleccions.Count);
-
             Console.ReadLine();
-         
 
 
+            sp.JugarPartido();
+            Console.WriteLine();
+            sp.PrepararPartido();
+            Console.WriteLine();
+            Console.ReadLine();
+
+
+            const int ALTA = 1, BAJA = 2, SHOW = 3, PREPARE = 4, MATCH = 5, EXIT = 6;
+            int option;
+
+            do
+            {
+
+
+
+                Console.WriteLine("Menú");
+                Console.WriteLine("1. Alta de participante");
+                Console.WriteLine("2. Baja de participante");
+                Console.WriteLine("3. Mostrar datos de seleccion");
+                Console.WriteLine("4. Preparar partido");
+                Console.WriteLine("5. Jugar partido");
+                Console.WriteLine("6. Salir");
+                option = Int32.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    case ALTA:
+                        Console.WriteLine("Puesto (Masajista, Seleccionador o Futbolista)");
+                        string puesto = Console.ReadLine();
+                        Console.WriteLine("Numero Id.");
+                        int id = Int32.Parse(Console.ReadLine();
+                        Console.WriteLine("Nombre");
+                        string nombre = Console.ReadLine();
+                        Console.Write("Apellido");
+                        string apellido = Console.ReadLine();
+                        Console.WriteLine("Edad");
+                        int edad = Int32.Parse(Console.ReadLine());
+
+                        if (puesto.ToUpper() == "Masajista")
+                        {
+                            Console.WriteLine("Titulacion");
+                            string titulacion = Console.ReadLine();
+                            Masajista m3 = new Masajista(nombre,
+                        }
+                }
+
+            } while (option != EXIT);
         }
     }
 }
